@@ -11,7 +11,7 @@ class  Classroom extends Model
     use HasTranslations;
     public $translatable = ['Name_Class'];
 
-    protected $table = 'Classrooms';
+    protected $table = 'classrooms';
     public $timestamps = true;
     public $fillable=['Name_Class','Grade_id'];
     public function Grades()

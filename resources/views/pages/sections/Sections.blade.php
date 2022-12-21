@@ -71,9 +71,8 @@
                                                                     <tr>
                                                                             <?php $i++; ?>
                                                                         <td>{{ $i }}</td>
-                                                                        <td>{{ $list_Sections->Name_Section }}</td>
-                                                                        <td>{{ $list_Sections->My_classs->Name_Class }}
-                                                                        </td>
+                                                                        <td>{{ $list_Sections->Name_Section}}</td>
+                                                                        <td>{{ $list_Sections->Classes->Name_Class ?? 'None'}}</td>
                                                                         <td>
                                                                             @if ($list_Sections->Status === 1)
                                                                                 <label
@@ -177,8 +176,8 @@
                                                                                             <select name="Class_id"
                                                                                                     class="custom-select">
                                                                                                 <option
-                                                                                                    value="{{ $list_Sections->My_classs->id }}">
-                                                                                                    {{ $list_Sections->My_classs->Name_Class }}
+                                                                                                    value="{{ $list_Sections->Classes->id ?? 'None' }}">
+                                                                                                    {{ $list_Sections->Classes->Name_Class ?? 'None'}}
                                                                                                 </option>
                                                                                             </select>
                                                                                         </div>

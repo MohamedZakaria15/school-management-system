@@ -216,7 +216,7 @@
                 var Classroom_id = $(this).val();
                 if (Classroom_id) {
                     $.ajax({
-                        url: "{{ URL::to('Get_Sections') }}/" + Classroom_id,
+                        url: "{{ URL::to('Get_sections') }}/" + Classroom_id,
                         type: "GET",
                         dataType: "json",
                         success: function (data) {

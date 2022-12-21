@@ -31,6 +31,9 @@ class CreateSectionsTable extends Migration
      */
     public function down()
     {
+        Schema::disableForeignKeyConstraints();
         Schema::dropIfExists('sections');
+        Schema::enableForeignKeyConstraints();
+
     }
 }

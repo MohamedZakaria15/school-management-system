@@ -17,9 +17,9 @@ class Sections extends Model
 
     // علاقة بين الاقسام والصفوف لجلب اسم الصف في جدول الاقسام
 
-    public function My_classs()
+    public function Classes()
     {
-        return $this->belongsTo(Classroom::class, 'Class_id');
+        return $this->belongsTo(Classroom::class,'Class_id');
     }
     public function teachers()
     {

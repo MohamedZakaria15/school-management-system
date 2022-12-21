@@ -11,18 +11,17 @@ return [
     'Grades_list'=>'Grades List',
     'classes'=>'Classes',
     'List_classes' => 'List Classes',
-    'List_Teachers' => 'List Teachers',
-
     'sections'=>'Sections',
     'List_sections'=>'List Sections',
     'students'=>'Students',
-    'list_Students'=>'List_Students',
-
-    'add_students'=>'أضافة طالب جديد',
+    'add_student'=>'Add student',
+    'list_students'=>'list Students',
+    'Students_Promotions'=>'Students Promotions',
     'information_student'=>'Information Students',
     'Students_upgrade'=>'Students Upgrade',
     'Graduate_students'=>'Graduate Students',
     'Teachers'=>'Teachers',
+    'List_Teachers' => 'List Teachers',
     'Parents'=>'Parents',
     'Add_Parent'=>'Add Parent',
     'List_Parents'=>'List Parents',
@@ -34,6 +33,8 @@ return [
     'Settings'=>'Settings',
     'Users'=>'Users',
     'Copyright' => 'Copyright',
+
     'Name_Programer' => 'SamirGamal MoraSoft All Rights Reserved'
+
 
 ];

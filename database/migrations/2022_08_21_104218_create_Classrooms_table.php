@@ -8,8 +8,9 @@ class CreateClassroomsTable extends Migration {
 
 	public function up()
 	{
-		Schema::create('Classrooms', function(Blueprint $table) {
-			$table->id();
+		Schema::create('classrooms', function(Blueprint $table) {
+
+            $table->id();
 			$table->string('Name_Class');
 			$table->bigInteger('Grade_id')->unsigned();
 			$table->timestamps();
@@ -18,6 +19,9 @@ class CreateClassroomsTable extends Migration {
 
 	public function down()
 	{
+        Schema::table('classrooms', function (Blueprint $table) {
+            $table->dropForeign(['Grade_id']);
+        });
 		Schema::drop('Classrooms');
 	}
 }

@@ -188,7 +188,7 @@
                                                 </button>
                                             </div>
                                             <div class="modal-body">
-                                                <form action="{{ route('Classrooms.destroy', 'test') }}"
+                                                <form action="{{ route('Classrooms.destroy', 'Classrooms') }}"
                                                       method="post">
                                                     {{ method_field('Delete') }}
                                                     @csrf

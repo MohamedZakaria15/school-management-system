@@ -1,19 +1,21 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Students;
 
+use App\Http\Controllers\Controller;
+use App\Repository\StudentGraduatedRepositoryInterface;
 use Illuminate\Http\Request;
 
-class Parent extends Controller
+class GraduatedController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+   protected $Graduated;
+   public function __construct(StudentGraduatedRepositoryInterface $Graduated)
+   {
+       $this->Graduated =$Graduated;
+   }
     public function index()
     {
-        //
+        return $this->Graduated->index();
     }
 
     /**
@@ -23,7 +25,7 @@ class Parent extends Controller
      */
     public function create()
     {
-        //
+            return $this->Graduated->create();
     }
 
     /**
@@ -34,7 +36,7 @@ class Parent extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return $this->Graduated->SoftDelete($request);
     }
 
     /**
@@ -68,7 +70,7 @@ class Parent extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        return $this->Graduated->ReturnData($request);
     }
 
     /**
@@ -77,8 +79,8 @@ class Parent extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request)
     {
-        //
+        return $this->Graduated->destroy( $request);
     }
 }
