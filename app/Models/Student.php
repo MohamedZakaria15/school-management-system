@@ -40,6 +40,9 @@ class Student extends Model
     public function myparent(){
         return $this->belongsTo(My_Parent::class,'parent_id');
     }
+    public function student_account(){
+        return $this->hasMany('App\Models\StudentAccount','student_id');
+    }
 
 
 }
